@@ -11,6 +11,9 @@
     flake-utils.lib.eachDefaultSystem (system:
       let
         projectName = "tpm-research";
+        pkgs = import nixpkgs {
+          inherit system;
+        };
 
         flakeboxLib = flakebox.lib.${system} {
           config = {
@@ -40,7 +43,8 @@
               craneLib = (craneLib'.overrideArgs {
                 pname = projectName;
                 src = buildSrc;
-                nativeBuildInputs = [ ];
+                buildInputs = [ pkgs.tpm2-tss ];
+                nativeBuildInputs = [ pkgs.pkg-config ];
               });
             in
             {
@@ -52,7 +56,10 @@
 
         legacyPackages = multiBuild;
 
-        devShells = flakeboxLib.mkShells { };
+        devShells = flakeboxLib.mkShells {
+            buildInputs = [ pkgs.tpm2-tss pkgs.go ];
+            nativeBuildInputs = [ pkgs.pkg-config ];
+        };
       }
     );
 }
