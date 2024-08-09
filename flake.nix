@@ -57,7 +57,7 @@
         legacyPackages = multiBuild;
 
         devShells = flakeboxLib.mkShells {
-            buildInputs = [ pkgs.tpm2-tss pkgs.go ];
+            buildInputs = [ pkgs.tpm2-tss pkgs.go pkgs.openssl ];
             nativeBuildInputs = [ pkgs.pkg-config ];
         };
       }
