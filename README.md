@@ -12,6 +12,8 @@ https://trustedcomputinggroup.org/wp-content/uploads/Registry-of-Reserved-TPM-2.
 
 https://trustedcomputinggroup.org/wp-content/uploads/TCG-TPM-Vendor-ID-Registry-Version-1.06-Revision-0.94_pub.pdf
 
+https://trustedcomputinggroup.org/wp-content/uploads/TCG_IWG_EKCredentialProfile_v2p4_r3.pdf
+
 
 https://www.nuvoton.com/export/sites/nuvoton/files/security/Nuvoton_TPM_EK_Certificate_Chain_Rev2.1.pdf
 
@@ -40,6 +42,18 @@ https://github.com/google/go-tpm/blob/main/examples/tpm-genaik/genaik.go
 https://github.com/Foxboron/go-tpm-keyfiles
 
 ## Remote attestation
+
+
+```
+2.2.1.4 Low Range
+The Low Range is at NV Indices 0x01c00002 - 0x01c0000c.
+0x01c00002 RSA 2048 EK Certificate
+0x01c00003 RSA 2048 EK Nonce
+0x01c00004 RSA 2048 EK Template
+0x01c0000a ECC NIST P256 EK Certificate
+0x01c0000b ECC NIST P256 EK Nonce
+0x01c0000c ECC NIST P256 EK Template
+```
 
 https://github.com/salrashid123/go_tpm_remote_attestation
 
