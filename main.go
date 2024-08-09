@@ -14,9 +14,7 @@ import (
 )
 
 var (
-	tpmPath = flag.String("tpm-path", "/dev/tpm0", "Path to the TPM device (character device or a Unix socket)")
-	index   = flag.Uint("index", 0, "NVRAM index of read")
-	useSim  = flag.Bool("simulator", false, "Use simulator instead of TPM")
+	useSim = flag.Bool("simulator", false, "Use simulator instead of TPM")
 )
 
 func doStuff(ttpm transport.TPM) {
