@@ -5,6 +5,7 @@ import (
 	"crypto/rand"
 	"encoding/hex"
 	"flag"
+	"fmt"
 	"github.com/google/go-cmp/cmp"
 	"github.com/google/go-cmp/cmp/cmpopts"
 	. "github.com/google/go-tpm/tpm2"
@@ -137,6 +138,20 @@ func doStuff(ttpm transport.TPM) {
 		log.Printf("want %x got %x", z, outPoint)
 	}
 }
+func checkHW(ttpm transport.TPM) {
+
+	// Check if EK certificate is present (often absent in simulators)
+	read := NVReadPublic{NVIndex: TPMHandle(0x1c00002)} // Standard handle for EK certificate
+	readResp, err := read.Execute(ttpm)
+	if err != nil {
+		fmt.Println("EK certificate not found. This might indicate a simulator.")
+	} else {
+		fmt.Println("EK certificate found. This suggests a hardware TPM.")
+	}
+	fmt.Printf("ReadResp: name %s, public %s \n", hex.EncodeToString(readResp.NVName.Buffer), string(readResp.NVPublic.Bytes()))
+
+}
+
 func main() {
 
 	flag.Parse()
@@ -147,7 +162,7 @@ func main() {
 			log.Fatalf("could not connect to TPM simulator: %+v", err)
 		}
 		defer ttpm.Close()
-		doStuff(ttpm)
+		checkHW(ttpm)
 	} else {
 		ttpm, err := transport.OpenTPM("/dev/tpm0")
 		if err != nil {
@@ -155,7 +170,7 @@ func main() {
 		}
 		defer ttpm.Close()
 
-		doStuff(ttpm)
+		checkHW(ttpm)
 	}
 
 }
