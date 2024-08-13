@@ -3,6 +3,15 @@
 
 Here I collect my finding for TPM
 
+## Specs
+
+https://trustedcomputinggroup.org/resource/tpm-library-specification/
+
+## Usage guideline
+
+https://trustedcomputinggroup.org/resource/how-to-use-the-tpm-a-guide-to-hardware-based-endpoint-security/#:~:text=1%20Set%20password%202%20Store%20digital%20credentials%20such,hard%20drive%20shutdown%20for%20endpoint%20integrity%20More%20items
+
+https://learn.microsoft.com/en-us/windows/security/hardware-security/tpm/tpm-recommendations
 
 ## Docs
 
@@ -17,19 +26,24 @@ https://trustedcomputinggroup.org/wp-content/uploads/TCG_IWG_EKCredentialProfile
 
 https://www.nuvoton.com/export/sites/nuvoton/files/security/Nuvoton_TPM_EK_Certificate_Chain_Rev2.1.pdf
 
+https://trustedcomputinggroup.org/resource/tpm-library-specification/
 
-
-## Nokia
+## Courses
 
 https://github.com/nokia/TPMCourse/blob/master/docs/keys.md
 
+https://github.com/Abhinandan-Khurana/Learn-TPM
 
 ## Certs
 
 https://tsci.intel.com/content/OnDieCA/crls/OnDie_CA_CSME_Indirect.crl
 https://www.nuvoton.com/security/NTC-TPM-EK-Cert/Nuvoton%20TPM%20Root%20CA%202112.cer
 
+## Dotnet
 
+https://github.com/Lumoin/Verifiable/blob/main/documents/ADRs/tpm-and-hardware-security.md
+
+https://github.com/Lumoin/Verifiable/blob/main/src/Verifiable.Tpm/Verifiable.Tpm.csproj
 
 ## Flakebox
 
@@ -40,6 +54,28 @@ https://github.com/rustshop/flakebox/blob/master/docs/building-new-project.md
 https://github.com/google/go-tpm/blob/main/examples/tpm-genaik/genaik.go
 
 https://github.com/Foxboron/go-tpm-keyfiles
+
+
+## Usecases
+
+
+https://github.com/salrashid123/golang-jwt-tpm
+
+https://github.com/salrashid123/golang-jwt-tpm
+
+https://github.com/salrashid123/golang-jwt-pkcs11
+
+https://github.com/salrashid123/signer
+
+https://github.com/salrashid123/go_tpm_https_embed
+
+https://github.com/salrashid123/tpmrand
+
+https://github.com/salrashid123/tls_ak
+
+https://github.com/salrashid123/aws_hmac
+
+https://github.com/salrashid123/go-tpm-wrapping
 
 ## Remote attestation
 
