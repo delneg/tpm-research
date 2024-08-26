@@ -28,6 +28,10 @@ https://www.nuvoton.com/export/sites/nuvoton/files/security/Nuvoton_TPM_EK_Certi
 
 https://trustedcomputinggroup.org/resource/tpm-library-specification/
 
+## Papers
+
+https://is.muni.cz/th/bplt1/thesis.pdf - Systematic collection of TPM 2.0 chips attributes on Linux
+
 ## Courses
 
 https://github.com/nokia/TPMCourse/blob/master/docs/keys.md
@@ -76,6 +80,14 @@ https://github.com/salrashid123/tls_ak
 https://github.com/salrashid123/aws_hmac
 
 https://github.com/salrashid123/go-tpm-wrapping
+
+## Raspi
+
+https://community.element14.com/products/roadtest/rv/roadtest_reviews/1514/infineon_trust_platf
+
+https://www.infineon.com/dgdl/Infineon-TPM20_Embedded_RPi_TSS_SLx_9670_AppNote-ApplicationNotes-v01_01-EN.zip?fileId=5546d4626eab8fbf016f13f1c3ff4c50&redirId=117198
+
+
 
 ## Remote attestation
 
